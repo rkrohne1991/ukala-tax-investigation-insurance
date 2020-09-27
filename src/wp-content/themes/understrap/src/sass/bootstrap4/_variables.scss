@@ -13,7 +13,7 @@ $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
+$gray-800: #504e4f !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
@@ -212,7 +212,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1107px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -714,8 +714,8 @@ $nav-divider-margin-y:              $spacer / 2 !default;
 
 // Navbar
 
-$navbar-padding-y:                  $spacer / 2 !default;
-$navbar-padding-x:                  $spacer !default;
+$navbar-padding-y:                  1.0625rem;
+$navbar-padding-x:                  0;
 
 $navbar-nav-link-padding-x:         .5rem !default;
 

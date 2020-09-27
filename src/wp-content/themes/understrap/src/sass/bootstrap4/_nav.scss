@@ -13,11 +13,14 @@
 
 .nav-link {
   display: block;
-  padding: $nav-link-padding-y $nav-link-padding-x;
+  // padding: $nav-link-padding-y $nav-link-padding-x;
   text-decoration: if($link-decoration == none, null, none);
+  opacity: 1;
+  @include transition($btn-transition);
 
   @include hover-focus() {
     text-decoration: none;
+    opacity: 0.9;
   }
 
   // Disabled state lightens text
