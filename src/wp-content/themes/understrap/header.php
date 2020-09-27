@@ -10,7 +10,9 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$container = get_theme_mod( 'understrap_container_type' );
+$logo = get_field('logo', 'option');
+$title = get_field('title', 'option');
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -34,12 +36,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="col-md-2 col-lg-4">
 						<div class="header__title">
 							<a class="header__logo" href="<?php echo(get_home_url()); ?>">
-								<img src="<?php echo(get_template_directory_uri()); ?>/img/UKALA-logo.png" alt="UKALA logo">
+								<img src="<?php echo($logo["url"]); ?>" alt="<?php echo($image['alt'] ? $image['alt'] : the_title() ); ?>">
 							</a>
-							<div class="header__text">
-								<p>UK ASSOCIATION</p>
-								<p><span>OF</span> LETTING AGENTS</p>
-							</div>
+							<div class="header__text"><p><?php echo($title); ?></p></div>
 						</div>
 					</div>
 					<div class="col-md-10 col-lg-8">
@@ -89,7 +88,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 				<div class="toggle-content">
 					<a class="header__logo" href="<?php echo(get_home_url()); ?>">
-						<img src="<?php echo(get_template_directory_uri()); ?>/img/UKALA-logo.png" alt="UKALA logo">
+						<img src="<?php echo($logo["url"]); ?>" alt="<?php echo($image['alt'] ? $image['alt'] : the_title() ); ?>">
 					</a>
 					<?php wp_nav_menu(
 							array(

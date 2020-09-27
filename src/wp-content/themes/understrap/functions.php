@@ -33,3 +33,7 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
